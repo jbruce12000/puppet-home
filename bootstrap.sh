@@ -9,7 +9,7 @@ apt-get -y install git-core puppet
 # Clone the 'puppet' repo
 cd /etc
 mv -f puppet/ puppet-bak
-git clone git@github.com:jbruce12000/puppet-home.git /etc/puppet
+git clone http://github.com/jbruce12000/puppet-home.git /etc/puppet
 
 # Run Puppet initially to set up the auto-deploy mechanism
 puppet apply /etc/puppet/manifests/site.pp
