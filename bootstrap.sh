@@ -20,6 +20,4 @@ fi
 git clone http://github.com/jbruce12000/puppet-home.git /etc/puppet
 
 # run puppet
-
-puppet --modulepath=/etc/puppet apply /etc/puppet/manifests/site.pp
-
+puppet apply /etc/puppet/manifests/site.pp
