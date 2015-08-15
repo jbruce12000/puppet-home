@@ -3,7 +3,7 @@ set -e
 set -x
 
 ## Install Git and Puppet
-apt-get update
+# apt-get update
 apt-get -y install git-core puppet &
 wait
 
