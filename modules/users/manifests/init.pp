@@ -1,10 +1,10 @@
 class users {
   user { 'jason':
-    ensure => present,
-    home   => '/home/jason',
-    shell  => '/bin/bash',
+    ensure   => present,
+    home     => '/home/jason',
+    shell    => '/bin/bash',
     password => '$1$syoOjm/C$z10QBDS8n9q/bSwdbgCnk0',
-    groups => ['adm','cdrom','sudo','dip','plugdev','lpadmin','sambashare','vboxusers'],
+    groups   => ['adm','cdrom','sudo','dip','plugdev','lpadmin','sambashare','vboxusers'],
     }
   } 
 
