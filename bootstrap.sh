@@ -19,5 +19,8 @@ fi
 
 git clone http://github.com/jbruce12000/puppet-home.git /etc/puppet
 
+# get the modules we need before apply
+puppet module install puppetlabs-apt
+
 # run puppet
 puppet apply /etc/puppet/manifests/site.pp
