@@ -57,9 +57,9 @@ package { 'dropbox': }
 # samba
 package { 'samba': }
 file { '/etc/samba/smb.conf':
-  ensure => present,
-  source => 'puppet:///modules/packages/smb.conf',
-  requires => Package['samba'],
+  ensure  => present,
+  source  => 'puppet:///modules/packages/smb.conf',
+  require => Package['samba'],
   }
 service { 'samba':
   ensure => running,
