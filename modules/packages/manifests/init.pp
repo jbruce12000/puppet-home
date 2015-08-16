@@ -29,7 +29,7 @@ package { 'inkscape': }
 package { 'picard': }
 
 # games
-package { 'pysol': }
+package { 'pysolfc': }
 package { 'gweled': }
 package { 'anagramarama': }
 
@@ -43,7 +43,6 @@ package { 'timekpr': }
 
 # browsers
 package { 'firefox': }
-package { 'adblock-plus': }
 
 # peerguardian and torrent
 apt::ppa { 'ppa:jre-phoenix/ppa': }
