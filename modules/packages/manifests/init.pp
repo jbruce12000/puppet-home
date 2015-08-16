@@ -63,7 +63,7 @@ file { '/etc/samba/smb.conf':
   }
 service { 'samba':
   ensure => running,
-  subscribe => File['samba'],
+  subscribe => File['/etc/samba/smb.conf'],
   }
 
 }
