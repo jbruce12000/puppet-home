@@ -47,13 +47,23 @@ package { 'firefox': }
 # peerguardian and torrent
 apt::ppa { 'ppa:jre-phoenix/ppa': }
 package { ['pgld','pglcmd','pglgui']:
-  ensure => present
+  ensure => present,
   }
 package { 'rtorrent': }
 
 # dropbox
 package { 'dropbox': }
-# samba, todo config
+
+# samba
 package { 'samba': }
+file { '/etc/samba/smb.conf':
+  ensure => present,
+  source => 'puppet:///modules/packages/smb.conf',
+  requires => Package['samba'],
+  }
+service { 'samba':
+  ensure => running,
+  subscribe => File['samba'],
+  }
 
 }
