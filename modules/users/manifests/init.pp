@@ -18,6 +18,23 @@ class users {
     ensure => present,
     }
 
+  file { '/home/video':
+    ensure => link,
+    target => '/bruces-media/video/',
+    }
+  file { '/home/music':
+    ensure => link,
+    target => '/bruces-media/music/',
+    }
+  file { '/home/pics':
+    ensure => link,
+    target => '/bruces-media/pics/',
+    }
+  file { '/home/books':
+    ensure => link,
+    target => '/bruces-media/books/',
+    }
+
   user { 'lennye':
     ensure   => present,
     home     => '/home/lennye',
@@ -35,7 +52,6 @@ class users {
     groups   => ['cdrom', 'sudo','dip','plugdev',
                  'lpadmin','sambashare','vboxusers'],
     }
-
   }
 
 # to get the passwd for puppet
