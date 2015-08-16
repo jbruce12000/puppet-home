@@ -1,4 +1,5 @@
 class users {
+
   user { 'jason':
     ensure   => present,
     home     => '/home/jason',
@@ -16,6 +17,24 @@ class users {
           '/home/jason/torrents/done',]:
     ensure => present,
     }
+
+  user { 'lennye':
+    ensure   => present,
+    home     => '/home/lennye',
+    shell    => '/bin/bash',
+    password => '$1$7CPNUxSn$MJD.FlpeM5SG/x2HTWU061',
+    groups   => ['adm','cdrom', 'sudo','dip','plugdev',
+                 'lpadmin','sambashare','vboxusers'],
+
+  user { 'jared':
+    ensure   => present,
+    home     => '/home/jared',
+    shell    => '/bin/bash',
+    password => '$1$vx93PcPr$82eo/64swTN7izZvX5mI8.',
+    groups   => ['cdrom', 'sudo','dip','plugdev',
+                 'lpadmin','sambashare','vboxusers'],
+
+
   }
 
 # to get the passwd for puppet
