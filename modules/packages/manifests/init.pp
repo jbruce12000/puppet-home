@@ -41,6 +41,10 @@ package { 'android-tools-fastboot': }
 apt::ppa { 'ppa:mjasnik/ppa': }
 package { 'timekpr': }
 
+# wine windows emulator
+apt::ppa { 'ppa:ubuntu-wine/ppa': }
+package { 'wine1.7': }
+
 # browsers
 package { 'firefox': }
 
