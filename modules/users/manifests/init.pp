@@ -56,5 +56,3 @@ class users {
 
 # to get the passwd for puppet
 # openssl passwd -1
-
-
