@@ -2,14 +2,27 @@ class packages {
 include apt
 
 # basics
-package { 'vim': }
-package { 'ubuntu-restricted-extras': }
-package { 'tofrodos': }
-package { 'checkinstall': }
 package { 'build-essential': }
+package { 'bzip2': }
+package { 'checkinstall': }
+package { 'conky': }
+package { 'curl': }
+package { 'evolution': }
 package { 'fdupes': }
-package { 'xclip': }
+package { 'git': }
 package { 'glipper': }
+package { 'hipchat': }
+package { 'nmap': }
+package { 'pdftk': }
+package { 'perl': }
+package { 'python': }
+package { 'python-virtualenv': }
+package { 'rsync': }
+package { 'tofrodos': }
+package { 'ubuntu-restricted-extras': }
+package { 'vim': }
+package { 'xclip': }
+package { 'zip': }
 
 # password mgmt
 package { 'password-gorilla': }
