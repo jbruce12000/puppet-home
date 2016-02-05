@@ -22,7 +22,6 @@ package { 'tofrodos': }
 package { 'ubuntu-restricted-extras': }
 package { 'vim': }
 package { 'xclip': }
-package { 'xnee': }
 package { 'zip': }
 
 # password mgmt
