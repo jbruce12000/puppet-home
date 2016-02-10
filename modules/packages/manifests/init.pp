@@ -56,15 +56,23 @@ package { 'timekpr': }
 
 # wine windows emulator
 apt::ppa { 'ppa:ubuntu-wine/ppa': }
-package { 'wine1.7': }
+package { 'wine': }
 
 # browsers
 package { 'firefox': }
 
 # peerguardian and torrent
-apt::ppa { 'ppa:jre-phoenix/ppa': }
+apt::ppa { 'ppa:jre-phoenix/ppa':
+  }
+apt::key { 'ppa:jre-phoenix/ppa':
+  key   =>  'C0145138',
+  }
 package { ['pgld','pglcmd','pglgui']:
-  ensure => present,
+  ensure  =>  latest,
+  require =>  [
+    Apt::Ppa['ppa:jre-phoenix/ppa'],
+    Apt::Key['ppa:jre-phoenix/ppa'],
+    ],
   }
 package { 'rtorrent': }
 
