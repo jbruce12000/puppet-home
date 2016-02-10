@@ -51,8 +51,19 @@ package { 'android-tools-adb': }
 package { 'android-tools-fastboot': }
 
 # timekpr to limit computer time
-apt::ppa { 'ppa:mjasnik/ppa': }
-package { 'timekpr': }
+apt::ppa { 'ppa:mjasnik/ppa':
+  }
+apt::key { 'ppa:mjasnik/ppa':
+  key   =>  '47FA1307',
+  }
+package { 'timekpr']:
+  ensure  =>  latest,
+  require =>  [
+    Apt::Ppa['ppa:mjasnik/ppa'],
+    Apt::Key['ppa:mjasnik/ppa'],
+    ],
+  }
+
 
 # wine windows emulator
 apt::ppa { 'ppa:ubuntu-wine/ppa': }
