@@ -25,7 +25,5 @@ if [ ! -x /usr/bin/add-apt-repository ]; then
   ln -sf /usr/local/bin/add-apt-repository /usr/bin/add-apt-repository
 fi
 
-puppet module install rcoleman-hipchat
-
 # run puppet
 puppet apply /etc/puppet/manifests/site.pp

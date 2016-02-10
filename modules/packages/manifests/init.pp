@@ -1,6 +1,5 @@
 class packages {
 include apt
-include hipchat
 
 # basics
 package { 'build-essential': }
