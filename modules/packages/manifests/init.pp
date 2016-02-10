@@ -56,7 +56,7 @@ apt::ppa { 'ppa:mjasnik/ppa':
 apt::key { 'ppa:mjasnik/ppa':
   key   =>  '47FA1307',
   }
-package { 'timekpr']:
+package { 'timekpr':
   ensure  =>  latest,
   require =>  [
     Apt::Ppa['ppa:mjasnik/ppa'],
