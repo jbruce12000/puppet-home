@@ -54,7 +54,7 @@ package { 'android-tools-fastboot': }
 apt::ppa { 'ppa:mjasnik/ppa':
   }
 apt::key { 'ppa:mjasnik/ppa':
-  key   =>  '47FA1307',
+  id   =>  '47FA1307',
   }
 package { 'timekpr':
   ensure  =>  latest,
@@ -76,7 +76,7 @@ package { 'firefox': }
 apt::ppa { 'ppa:jre-phoenix/ppa':
   }
 apt::key { 'ppa:jre-phoenix/ppa':
-  key   =>  'C0145138',
+  id   =>  'C0145138',
   }
 package { ['pgld','pglcmd','pglgui']:
   ensure  =>  latest,
