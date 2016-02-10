@@ -1,5 +1,6 @@
 class packages {
 include apt
+include hipchat
 
 # basics
 package { 'build-essential': }
@@ -11,7 +12,6 @@ package { 'evolution': }
 package { 'fdupes': }
 package { 'git': }
 package { 'glipper': }
-package { 'hipchat': }
 package { 'nmap': }
 package { 'pdftk': }
 package { 'perl': }
