@@ -50,18 +50,18 @@ package { 'android-tools-adb': }
 package { 'android-tools-fastboot': }
 
 # timekpr to limit computer time
-apt::ppa { 'ppa:mjasnik/ppa':
-  }
-apt::key { 'ppa:mjasnik/ppa':
-  id   =>  '47FA1307',
-  }
-package { 'timekpr':
-  ensure  =>  latest,
-  require =>  [
-    Apt::Ppa['ppa:mjasnik/ppa'],
-    Apt::Key['ppa:mjasnik/ppa'],
-    ],
-  }
+#apt::ppa { 'ppa:mjasnik/ppa':
+#  }
+#apt::key { 'ppa:mjasnik/ppa':
+#  id   =>  '47FA1307',
+#  }
+#package { 'timekpr':
+#  ensure  =>  latest,
+#  require =>  [
+#    Apt::Ppa['ppa:mjasnik/ppa'],
+#    Apt::Key['ppa:mjasnik/ppa'],
+#    ],
+#  }
 
 
 # wine windows emulator
@@ -72,18 +72,18 @@ package { 'wine': }
 package { 'firefox': }
 
 # peerguardian and torrent
-apt::ppa { 'ppa:jre-phoenix/ppa':
-  }
-apt::key { 'ppa:jre-phoenix/ppa':
-  id   =>  'C0145138',
-  }
-package { ['pgld','pglcmd','pglgui']:
-  ensure  =>  latest,
-  require =>  [
-    Apt::Ppa['ppa:jre-phoenix/ppa'],
-    Apt::Key['ppa:jre-phoenix/ppa'],
-    ],
-  }
+#apt::ppa { 'ppa:jre-phoenix/ppa':
+#  }
+#apt::key { 'ppa:jre-phoenix/ppa':
+#  id   =>  'C0145138',
+#  }
+#package { ['pgld','pglcmd','pglgui']:
+#  ensure  =>  latest,
+#  require =>  [
+#    Apt::Ppa['ppa:jre-phoenix/ppa'],
+#    Apt::Key['ppa:jre-phoenix/ppa'],
+#    ],
+#  }
 package { 'rtorrent': }
 
 # dropbox
