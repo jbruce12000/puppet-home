@@ -65,25 +65,28 @@ package { 'android-tools-fastboot': }
 
 
 # wine windows emulator
-apt::ppa { 'ppa:ubuntu-wine/ppa': }
-package { 'wine': }
+#apt::ppa { 'ppa:ubuntu-wine/ppa': }
+#package { 'wine': }
 
 # browsers
 package { 'firefox': }
 
-# peerguardian and torrent
-#apt::ppa { 'ppa:jre-phoenix/ppa':
-#  }
-#apt::key { 'ppa:jre-phoenix/ppa':
-#  id   =>  'C0145138',
-#  }
-#package { ['pgld','pglcmd','pglgui']:
-#  ensure  =>  latest,
-#  require =>  [
-#    Apt::Ppa['ppa:jre-phoenix/ppa'],
-#    Apt::Key['ppa:jre-phoenix/ppa'],
-#    ],
-#  }
+ peerguardian and torrent
+apt::ppa { 'ppa:jre-phoenix/ppa':
+  options => '-y',
+  }
+apt::key { 'ppa:jre-phoenix/ppa':
+  id   =>  'C0145138',
+  }
+package { ['pgld','pglcmd','pglgui']:
+  ensure  =>  latest,
+  require =>  [
+    Apt::Ppa['ppa:jre-phoenix/ppa'],
+    Apt::Key['ppa:jre-phoenix/ppa'],
+    ],
+  }
+
+
 package { 'rtorrent': }
 
 # dropbox
