@@ -15,7 +15,7 @@ class users {
           '/home/jason/torrents/tmp',
           '/home/jason/torrents/session',
           '/home/jason/torrents/done',]:
-    ensure => present,
+    ensure => 'directory',
     }
 
   file { '/home/video':
