@@ -71,7 +71,7 @@ package { 'android-tools-fastboot': }
 # browsers
 package { 'firefox': }
 
- peerguardian and torrent
+# peerguardian and torrent
 apt::ppa { 'ppa:jre-phoenix/ppa':
   options => '-y',
   }
