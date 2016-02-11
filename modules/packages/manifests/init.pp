@@ -6,6 +6,7 @@ package { 'build-essential': }
 package { 'bzip2': }
 package { 'checkinstall': }
 package { 'conky': }
+package { 'chromium-browser': }
 package { 'curl': }
 package { 'evolution': }
 package { 'fdupes': }
