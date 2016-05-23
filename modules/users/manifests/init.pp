@@ -6,7 +6,7 @@ class users {
     shell    => '/bin/bash',
     password => '$1$syoOjm/C$z10QBDS8n9q/bSwdbgCnk0',
     groups   => ['adm','cdrom', 'sudo','dip','plugdev',
-                 'lpadmin','sambashare','vboxusers'],
+                 'lpadmin',],
     }
 
   file { ['/home/jason/torrents',
@@ -34,6 +34,10 @@ class users {
     ensure => link,
     target => '/bruces-media/books/',
     }
+  file { '/home/roms':
+    ensure => link,
+    target => '/bruces-media/roms/',
+    }
 
   user { 'lennye':
     ensure   => present,
@@ -41,7 +45,7 @@ class users {
     shell    => '/bin/bash',
     password => '$1$7CPNUxSn$MJD.FlpeM5SG/x2HTWU061',
     groups   => ['adm','cdrom', 'sudo','dip','plugdev',
-                 'lpadmin','sambashare','vboxusers'],
+                 'lpadmin',],
     }
 
   user { 'jared':
@@ -50,7 +54,7 @@ class users {
     shell    => '/bin/bash',
     password => '$1$vx93PcPr$82eo/64swTN7izZvX5mI8.',
     groups   => ['cdrom', 'sudo','dip','plugdev',
-                 'lpadmin','sambashare','vboxusers'],
+                 'lpadmin',],
     }
   }
 
