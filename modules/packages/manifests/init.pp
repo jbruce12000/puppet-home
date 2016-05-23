@@ -13,6 +13,7 @@ package { 'fdupes': }
 package { 'git': }
 package { 'glipper': }
 package { 'nmap': }
+package { 'pcsxr': }
 package { 'pdftk': }
 package { 'perl': }
 package { 'python': }
