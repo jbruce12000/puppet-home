@@ -90,16 +90,17 @@ package { 'rtorrent': }
 # dropbox
 package { 'dropbox': }
 
-# samba
-package { 'samba': }
-file { '/etc/samba/smb.conf':
+# nfs
+package { 'nfs-kernel-server': }
+file { '/etc/exports':
   ensure  => present,
-  source  => 'puppet:///modules/packages/smb.conf',
-  require => Package['samba'],
+  source  => 'puppet:///modules/packages/exports',
+  require => Package['nfs-kernel-server'],
   }
-service { 'samba':
+service { 'nfs-kernel-server':
   ensure => running,
-  subscribe => File['/etc/samba/smb.conf'],
+  subscribe => File['/etc/exports'],
   }
+
 
 }
