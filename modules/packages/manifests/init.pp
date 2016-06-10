@@ -19,6 +19,7 @@ package { 'perl': }
 package { 'python': }
 package { 'python-virtualenv': }
 package { 'rsync': }
+package { 'steam-launcher': }
 package { 'tofrodos': }
 package { 'ubuntu-restricted-extras': }
 package { 'vim': }
