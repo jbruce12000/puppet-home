@@ -9,7 +9,8 @@
 # /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
 #
 
-/home/video 10.0.0.3(rw,all_squash,insecure,no_subtree_check) 10.0.0.4(rw,all_squash,insecure,no_subtree_check)
-/home/video/tv 10.0.0.3(rw,all_squash,insecure,no_subtree_check) 10.0.0.4(rw,all_squash,insecure,no_subtree_check)
-/home/music 10.0.0.3(rw,all_squash,insecure,no_subtree_check) 10.0.0.4(rw,all_squash,insecure,no_subtree_check)
-/home/pics 10.0.0.3(rw,all_squash,insecure,no_subtree_check) 10.0.0.4(rw,all_squash,insecure,no_subtree_check)
+# allow everything on the 10.x.x.x network to connect
+/home/video 10.0.0.0/24(rw,all_squash,insecure,no_subtree_check)
+/home/video/tv 10.0.0.0/24(rw,all_squash,insecure,no_subtree_check)
+/home/music 10.0.0.0/24(rw,all_squash,insecure,no_subtree_check)
+/home/pics 10.0.0.0/24(rw,all_squash,insecure,no_subtree_check)
