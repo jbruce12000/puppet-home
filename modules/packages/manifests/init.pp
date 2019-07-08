@@ -43,6 +43,7 @@ package { 'inkscape': }
 
 # music
 package { 'picard': }
+package { 'pianobar': }
 
 # games
 package { 'pysolfc': }
