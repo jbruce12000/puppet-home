@@ -11,15 +11,11 @@ package { 'curl': }
 package { 'evolution': }
 package { 'fdupes': }
 package { 'git': }
-package { 'glipper': }
 package { 'nmap': }
-package { 'pcsxr': }
-package { 'pdftk': }
 package { 'perl': }
 package { 'python': }
 package { 'python-virtualenv': }
 package { 'rsync': }
-package { 'steam-launcher': }
 package { 'tofrodos': }
 package { 'ubuntu-restricted-extras': }
 package { 'vim': }
@@ -30,9 +26,6 @@ package { 'zip': }
 # password mgmt
 package { 'password-gorilla': }
 
-
-# virtualization
-package { 'virtualbox-nonfree': }
 
 # networking
 package { 'xchat': }
@@ -54,40 +47,10 @@ package { 'anagramarama': }
 package { 'android-tools-adb': }
 package { 'android-tools-fastboot': }
 
-# timekpr to limit computer time
-apt::ppa { 'ppa:mjasnik/ppa':
-  options => '-y',
-  }
-apt::key { 'ppa:mjasnik/ppa':
-  id   =>  '47FA1307',
-  }
-package { 'timekpr':
-  ensure  =>  latest,
-  require =>  [
-    Apt::Ppa['ppa:mjasnik/ppa'],
-    Apt::Key['ppa:mjasnik/ppa'],
-    ],
-  }
-
 # browsers
 package { 'firefox': }
 
-# peerguardian and torrent
-apt::ppa { 'ppa:jre-phoenix/ppa':
-  options => '-y',
-  }
-apt::key { 'ppa:jre-phoenix/ppa':
-  id   =>  'C0145138',
-  }
-package { ['pgld','pglcmd','pglgui']:
-  ensure  =>  latest,
-  require =>  [
-    Apt::Ppa['ppa:jre-phoenix/ppa'],
-    Apt::Key['ppa:jre-phoenix/ppa'],
-    ],
-  }
-
-
+# torrent
 package { 'rtorrent': }
 
 # dropbox
