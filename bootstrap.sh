@@ -25,5 +25,8 @@ if [ ! -x /usr/bin/add-apt-repository ]; then
   ln -sf /usr/local/bin/add-apt-repository /usr/bin/add-apt-repository
 fi
 
+ln -sf /etc/puppet/modules/users /etc/puppet/code/modules/users
+ln -sf /etc/puppet/modules/packages /etc/puppet/code/modules/packages
+
 # run puppet
 puppet apply /etc/puppet/manifests/site.pp
