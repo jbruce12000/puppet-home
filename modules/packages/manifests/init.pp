@@ -35,8 +35,9 @@ package { 'etherape': }
 package { 'inkscape': }
 
 # music
-package { 'picard': }
+package { 'gmusicbrowser': }
 package { 'pianobar': }
+package { 'picard': }
 
 # games
 package { 'pysolfc': }
