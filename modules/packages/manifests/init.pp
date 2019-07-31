@@ -14,7 +14,7 @@ package { 'git': }
 package { 'nmap': }
 package { 'perl': }
 package { 'python': }
-package { 'python-virtualenv': }
+package { 'virtualenv': }
 package { 'rsync': }
 package { 'tofrodos': }
 package { 'ubuntu-restricted-extras': }
